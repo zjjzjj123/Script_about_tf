@@ -43,8 +43,6 @@ def restore_pb():
 def view_pb():
     pb_file = 'model1.pb'
     netron.start(pb_file)
-
-
 def creat_pb2():
     with tf.Session(graph=tf.Graph()) as sess:
         x = tf.placeholder(tf.int32,name='x')
@@ -79,7 +77,4 @@ def restored_pb2():
 if __name__ == '__main__':
     print('start')
     creat_pb2()
-    # restore_pb2()
-    # view_pb()
-    # restored_pb2()
     print('end')
